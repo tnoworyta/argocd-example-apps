@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: landing
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: landing
+  template:
+    metadata:
+      labels:
+        app: landing
+    spec:
+      containers:
+        - image: docker pull ghcr.io/tnoworyta/landing:sha-bbe53ba
+          name: landing
+          ports:
+            - containerPort: 3000
