@@ -14,7 +14,7 @@ spec:
         app: landing
     spec:
       containers:
-        - image: docker pull ghcr.io/tnoworyta/landing:sha-bbe53ba
+        - image: ghcr.io/tnoworyta/landing:sha-bbe53ba
           name: landing
           ports:
             - containerPort: 3000
